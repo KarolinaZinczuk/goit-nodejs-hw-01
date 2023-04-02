@@ -28,7 +28,7 @@ async function removeContact(contactId) {
   if (index === -1) {
     return null;
   }
-  const [removedContact] = contacts.splice(index, 1);
+  const removedContact = contacts.splice(index, 1);
   await updateContacts(contacts);
   return removedContact;
 }
